@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Counter Guide</title>
+</head>
+<body>
+
+    <button id="clickBtn">คลิกฉันเลย</button>
+    
+    <p>คุณคลิกไปแล้ว: <span id="showNumber">0</span> ครั้ง</p>
+
+    <script>
+        // Step 1: สร้างตัวแปรสำหรับเก็บจำนวนคลิก (ประกาศไว้ตรงนี้เพื่อไม่ให้โดนรีเซ็ต)
+        let clickCount = 0;
+
+        // Step 2: อ้างอิง DOM Elements ที่ต้องการใช้งาน
+        const btn = document.getElementById('clickBtn');
+        const display = document.getElementById('showNumber');
+
+        // Step 3: กำหนด Event ให้ปุ่ม โดยไม่ใช้ addEventListener
+        // ใบ้: เรียกใช้ Property ของ btn ที่เกี่ยวกับการคลิก
+        btn.onclick = function() {
+           
+            
+            // Step 4: อัปเดตค่าตัวแปร
+            // เขียนโค้ดเพื่อบวกค่า clickCount ขึ้น 1
+            clickCount++;
+
+            // Step 5: นำค่าใหม่ไปแสดงผลบน DOM
+            // ใบ้: เปลี่ยนข้อความข้างในแท็ก span
+            display.innerText = clickCount;
+            
+        };
+    </script>
+</body>
+</html>

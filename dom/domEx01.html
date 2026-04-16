@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- // <h1 id="jsdTag">JSD12</h1> -->
+    <h1 id="jsdTag">JSD12 <span style="display: none">Javascript</span></h1>
+    <button id="changeName" onclick="changeName()">โคตรหล่อ โคตรอันตราย</button>
+    <script>
+      const d = document;
+      const jsdH1 = document.getElementById("jsdTag")
+        // const text = document.getElementById("jsdTag").style.color = 'green';
+        // const backgroundColor = document.getElementById("jsdTag").style.backgroundColor = 'pink';
+        // const textweight = document.getElementById("jsdTag").style.fontWeight = 600;
+      jsdH1.style.color ='green';
+      jsdH1.style.backgroundColor = 'pink';
+      jsdH1.style.fontWeight ='900';
+      jsdH1.innerHTML = "pipatpong";
+      // เลือก element 
+      function changeName () {
+        const jsdTag =  d.getElementById("jsdTag");
+        jsdTag.textContent = "TETSUO"
+        d.querySelector("#changeName").disabled = true;
+        }
+        // use event conduct click
+        // call function
+        // use function change text and stye in HTML
+
+
+        
+
+
+
+
+    </script>
+  </body>
+</html>
+
+ <!-- เปลี่ยน h1 โดยใช้ dom ! เป็นสีชมพู background สีเขียว font bold และเปลี่ยน จาก jsd 12 เป็นชือตัวเอง -->

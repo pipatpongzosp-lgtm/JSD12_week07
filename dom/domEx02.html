@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- // <h1 id="jsdTag">JSD12</h1> -->
+    <h1 id="jsdTag">JSD12</h1>
+    <button id ="add">click me</button>
+    <p>กดแล้วนะ:<span id="showNumber">0</p>
+     
+    <script>
+      const d = document;
+      const display = d.querySelector("#showNumber");
+      const  btn = d.querySelector("#add");
+
+      
+      // select element
+      let count =0;
+      btn.onclick = function increaseValue() {
+        count++;
+        display.innerText = count;
+
+
+      };
+    </script>
+  </body>
+</html>
