@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lion shount</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col justify-center bg-black text-white">
+    <h1 class="bg-orange-500 flex justify-center">Lion shount</h1>
+    <p class="flex justify-center">
+      lion looking you:<span id="showNumber">0</span>
+    </p>
+    <button id="lion" class="flex justify-center w-auto h-auto ">
+        <img src="lion.png" alt="lion" />
+    </button>
+    <div class="flex flex-row justify-center">
+      <button
+        id="cost1"
+        onclick="tool1()"
+        class="border-2 border-lime-500 w-[150px] h-[80px]"
+      >
+        Add junior lion <br><p>cost 15 act </p>
+      </button>
+
+      <button
+        id="cost2"
+        onclick="tool2()"
+        class="border-2 border-lime-500 w-[150px] h-[80px]"
+      >
+        Add adult lion <br><p>cost 30 act </p>
+      </button>
+
+      <button
+        id="stop"
+        onclick="stop()"
+        class="border-2 border-lime-500 w-[150px] h-[80px]"
+      >
+        stop now 
+      </button>
+
+
+      
+    </div>
+    <script>
+      const d = document;
+      let hit = 0;
+      let display = d.querySelector("#showNumber");
+      let btn = d.querySelector("#lion");
+      let boost2 = d.querySelector("#cost2")
+      let toolWork = true;
+      let rawMeat = 0;
+      
+
+      
+      function increasepress() {
+        hit++;
+        display.innerText = hit;
+
+      };
+      btn.onclick = increasepress
+
+      function multiplypress() {
+        hit = hit * 2;
+        display.innerText = hit;
+      };
+      
+       
+      function tool1() {
+        if (hit >= 20) {
+          
+          hit1 = hit - 15;
+          display.innerText = hit1;
+          setInterval(function() { 
+            increasepress()
+         }, 1000);
+        }
+      }
+
+      function tool2() {
+        if (hit >= 30) {
+          hit2 = hit - 30;
+          display.innerText = hit2;
+          setInterval(function() { 
+            increasepress()
+         }, 100);
+        }
+      }
+      function stop(){
+        hit = 0;
+        display.innerText = hit;
+      }
+     
+    
+     
+    </script>
+  </body>
+</html>
